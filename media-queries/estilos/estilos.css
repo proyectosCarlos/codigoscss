@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Nunito:wght@400;500&family=Open+Sans:wght@300&family=Poppins:wght@300;700&family=Raleway:ital,wght@0,100;0,400;0,500;1,300;1,400;1,500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+:root {
+  --color: crimson;
+}
+
+.title {
+  font-size: 3rem;
+  color: crimson;
+  margin: 40px 0;
+  text-align: center;
+  font-family: monospace;
+}
+
+@media print {
+  /* print */
+  /* como se va a ver si doy click derecho - imprmir sobre una pagina web */
+  .title {
+    font-size: 5rem;
+    color: slateblue;
+  }
+}
+
+/* @media screen and (max-width: 600px) {
+  .title {
+    font-size: 5rem;
+    background-color: black;
+    color: var(--color);
+  }
+}
+
+@media screen and (orientation: landscape) {
+  .title {
+    font-size: 15rem;
+    background-color: rgb(14, 40, 185);
+    color: var(--color);
+  }
+} */
+
+/* @media screen and (orientation: portrait) and (max-width: 600px) {
+  .title {
+    text-align: right;
+  }
+} */
+
+@media screen and (max-width: 400px), (min-width: 900px) {
+  .title {
+    color: blue;
+  }
+}

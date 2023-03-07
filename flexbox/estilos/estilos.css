@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Nunito:wght@400;500&family=Open+Sans:wght@300&family=Poppins:wght@300;700&family=Raleway:ital,wght@0,100;0,400;0,500;1,300;1,400;1,500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.container {
+  width: 90%;
+  max-width: 600px;
+  height: 600px;
+  outline: 2px solid black;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: row;
+  /* flex-direction: row;
+  flex-wrap: wrap; */
+
+  /* flex-flow: row wrap-reverse; */
+  /* justify-content: center; */
+  /* justify-content: space-around;
+  align-items: center; */
+
+  /* flex-wrap: wrap;
+  align-content: space-around; */
+}
+
+.item {
+  --heigth: 90px;
+  background: tomato;
+  width: 200px;
+  height: var(--heigth);
+  line-height: var(--heigth);
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+  /* flex: 1 1 0; */
+  /* flex-basis: 150px; */
+  /* flex-grow: 1; */
+}
+
+.item1 {
+  background: steelblue;
+  flex-shrink: 4;
+  /* align-self: flex-end; */
+}
+
+.item2 {
+  background: crimson;
+  /* align-self: stretch; */
+  /* height: auto; */
+}
+
+.item3 {
+  background: rgb(42, 21, 156);
+  flex-grow: 3;
+}
+
+.item4 {
+  background: rgb(204, 71, 9);
+}

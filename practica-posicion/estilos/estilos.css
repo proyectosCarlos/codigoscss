@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Nunito:wght@400;500&family=Open+Sans:wght@300&family=Poppins:wght@300;700&family=Raleway:ital,wght@0,100;0,400;0,500;1,300;1,400;1,500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  min-height: 200vh;
+}
+
+.hero {
+  height: 100vh;
+  background-image: linear-gradient(180deg, #275dc26b 0%, #1d20b673 100%),
+    url(/img/imagen5.jpg);
+  background-position: center;
+  background-size: cover;
+  padding: 0.1px;
+  position: relative;
+}
+
+.container-text {
+  text-align: center;
+  margin-top: 150px;
+  color: #fff;
+}
+
+.hero-title {
+  font-size: 4rem;
+}
+
+.hero-copy {
+  font-size: 2rem;
+  font-weight: 300;
+  margin: 20px 0;
+}
+
+.hero-cta {
+  background: #fff;
+  text-decoration: none;
+  color: #257dc2;
+  padding: 15px 25px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.hero-cta:hover {
+  background: #257dc2;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.hero-wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}

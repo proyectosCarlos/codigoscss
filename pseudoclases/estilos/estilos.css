@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Nunito:wght@400;500&family=Open+Sans:wght@300&family=Poppins:wght@300;700&family=Raleway:ital,wght@0,100;0,400;0,500;1,300;1,400;1,500&display=swap");
+:root {
+  background: salmon;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.enlace {
+  display: block;
+  background: tomato;
+  color: #fff;
+  text-decoration: none;
+  padding: 20px;
+  border-bottom: 3px solid white;
+}
+
+/* solo para las etiquetas a */
+.enlace:link {
+  background: burlywood;
+  color: #000;
+}
+
+/* solo para las etiquetas a */
+.enlace:visited {
+  background: crimson;
+}
+
+.enlace:hover {
+  /* text-decoration: underline; */
+  padding: 40px 20px;
+  transition: 0.3s;
+}
+
+.enlace:active {
+  background: slateblue;
+  color: rgb(48, 255, 21);
+}
+
+.event {
+  display: inline-block;
+  margin-top: 30px;
+  margin-left: 20px;
+  background: crimson;
+  color: #fff;
+  text-decoration: none;
+  padding: 20px;
+}
+
+.event:active {
+  padding: 23px;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  margin-top: 30px;
+  margin-left: 20px;
+  background: steelblue;
+  transition: 0.3s;
+}
+
+.box:target {
+  margin-left: 80px;
+}
+
+/* formulario */
+
+.form {
+  width: 80%;
+  margin: 30px auto;
+  background-color: #838282;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  padding: 30px;
+  border-radius: 24px;
+}
+
+.form:focus-within {
+  background: darkcyan;
+}
+
+.form_title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+input {
+  display: block;
+}
+
+input[type="checkbox"] {
+  display: inline-block;
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  padding: 12px 5px;
+  margin-bottom: 20px;
+  border: none;
+  /* outline es el borde negro de lso imputs */
+  outline: none;
+}
+
+input:focus {
+  background: rgba(207, 220, 20, 0.507);
+}
+
+input[type="checkbox"]:checked + label {
+  background: crimson;
+  color: #fff;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: normal;
+  font-family: "Arial";
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+h3:not(.title) {
+  color: aqua;
+}
+
+h3:not(:hover) {
+  text-decoration-line: line-through;
+}

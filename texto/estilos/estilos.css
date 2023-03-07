@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;500&family=Open+Sans:wght@300&family=Poppins:wght@300;700&family=Raleway:ital,wght@0,100;0,400;0,500;1,300;1,400;1,500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  background: rgb(124, 176, 228);
+}
+
+.container {
+  background: white;
+  width: 70%;
+  margin: 30px auto;
+  padding: 20px;
+  box-shadow: 3px 3px 10px rgb(0, 0, 0.2);
+  text-align: center;
+}
+
+.title {
+  text-align: center;
+  text-align: inherit;
+}
+
+.copy {
+  text-align: justify;
+  padding: 10px 0;
+  /* letter-spacing: -1px; */
+  /* word-spacing: 30px; */
+  /* text-shadow: 3px -5px 10px rgba(185, 31, 31, 0.5); */
+  text-transform: lowercase;
+  /* line-height: 30px; */
+}
+
+.enlace {
+  display: inline-block;
+  color: crimson;
+  padding: 10px 25px;
+  border: 1px solid;
+  text-decoration: none;
+  /* text-decoration: underline; */
+  /* text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: crimson; */
+}

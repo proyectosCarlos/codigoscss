@@ -1,0 +1,523 @@
+enlaces de interes
+
+quitar fondos de imagenes 
+https://www.remove.bg/es
+
+iconos
+https://boxicons.com/?query=arrow
+
+imagenes
+https://unsplash.com/
+
+Gradientes
+https://webgradients.com/
+
+Generadr olas svg
+https://smooth.ie/blogs/news/svg-wavey-transitions-between-sections
+
+Conocer la resulocion de mi pantalla
+https://whatismyviewport.com/
+
+-----------------------------------------------------------------------------
+display: inline: NO comienzan en una nueva línea y
+solo ocupan tanto ancho como su contenido, si aplico un 
+ancho y alto a elemento que ya tenga esta propiedad
+ estos no van a tener efecto en el contenedor.
+ span
+a
+img
+em
+strong
+i
+small
+
+ display: inline-block: es igual que inline solo que en 
+ este caso si van a taner efecto las propiedades ancho y alto
+
+display: block: ocupa todo el ancho del contenedor, este si inicia
+una nueva linea: div
+h1
+p
+li
+section
+
+
+
+----------------------------------------------------------------------
+
+margin: 10px  10px  10px 10px;
+/* arriba, derecha, abajo, izquiera */
+
+si solo ponemos 2 valores estos van a ser: el primero los de arriba y abajo el segundo
+a los lados 
+margin: 10px  10px ;
+
+con  margin: auto; puedo centrar horizontalmente siempre y cuando tenga un width definido
+ademas debe ser un elemento bloque como por ejemplo div
+
+
+cuando se usa el padding este incrememta el tamaño del elemento, para evitar que esto pase
+puedo usar la propiedad  box-sizing: border-box; para que el elemento mantenga sus dimensiones 
+originales
+
+border: 1px solid red;
+tamaño tipo color
+
+  border-radius: 15px 4px 30px 10px;
+  arriba izq, arriba derecha, abajo derecha, abajo izq
+
+
+   box-shadow: 10 ;
+desplazamiento horizontal, desplazamiento vertical , difuminar la sombra, esparcir la sombra, color
+si uso numeros positivoe en el desplazamiento la sombra se va a mover hacia abajo y a ña derecha
+pero si uso numero negativos se va a desplazar hacia arriba y a la izquierda
+
+
+
+
+-----------------------------------------------------------------------------------------
+Textos
+
+text-align: center;
+me ayuda a centrar los textos
+
+si tengo una imagen dentro de un contenedor padre puedo centrarla 
+con text-align: center; ya que esta se puede tratar com un texto 
+
+cuando uso el valor inherit (ojo valor No propiedad) estoy indicando que quiero que
+herede el valor de la misma propiedad que tiene el elemento padre
+
+
+ letter-spacing: 20px;
+ espacio entre letras
+ puedo usar numeros negativos
+
+ word-spacing: 10px;
+ espacio entre cada palabra
+  puedo usar numeros negativos
+
+   text-shadow: desplazamiento en x, desp en y, blur, color ;
+   sombra a los textos
+
+
+ text-transform: uppercase ;
+ transforma todo el texto, en este caso todo a mayusculas
+
+ line-height: 30px;
+ altura de cada lina de texto, esto nos sirve para separar 
+ el espaciado entre lineas en un parrafo
+
+  text-decoration: underline;
+  esta propuedad esa dividida en 3 partes 
+   text-decoration: linea, estilo y color ;
+   y se puede manipular de la siguiente forma:
+
+    text-decoration-line: line-through overline underline;
+    posicion de la linea, sobre el texto, arriba o abajo del texto
+
+    text-decoration-style: wavy; o dashed o  dotted 
+    con olas, con rayas o puntos
+
+  text-decoration-color: crimson;
+  color de la lineas
+
+
+
+---------------------------------------------------------------------------------
+
+Tamaños
+
+REM
+toma como base el tamaño del navegador, que para la mayoria es 16px
+el tamaño base de los textos en los navegadores es generalmente  
+16px, en este caso 1rem equivale a 16px
+
+
+podemos cambiar el tamaño base de la letra agregando la propiedad 
+font-sizea nuestro html de la siguiente forma 
+html{
+    font-size: 32px
+}
+ya para este caso 1rem equivale a 32px
+
+EM
+toma como base el tamaño de fuente del elemento padre
+
+
+para cambiar el tipo de letra usamos google fonts
+importamos el tipo de furnte y lo agregamos al archivo .css
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;500&family=Open+Sans:wght@300&family=Poppins:wght@300;700&family=Raleway:ital,wght@0,100;0,400;0,500;1,300;1,400;1,500&display=swap");
+luego dentro de la etiqueda html o body agregamos la fuente
+body {
+
+  font-family: "Raleway", sans-serif;
+}
+
+
+Para poder usar height con porcentajes nesecito que el elemento padre tenga un tamaño definido y no en porcentajes
+tambien.
+
+
+viewport width: vw
+viewport height: vh 
+
+ambas medidas van adel 1 al 100 y son relativas por que dependen del tamaño del viewport y el viewport es el total 
+de lo que puedo ver en pantalla 
+
+--------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------------------
+background
+
+
+background-image: url(/img/tecnologia.jpg)
+ me permite poner una imagen de fondo 
+
+  background-image: url(/img/tecnologia.jpg), url(/img/sun.png);
+  cuando quiero agregar mas de una imagen al contenedor los separo 
+  con una ','
+
+  si una imagen es muy pequeña se va a repetir muchas veces en el contenedor 
+  pero si queremos que solo este una vez usamos la propiedad  background-repeat
+  que por defecto su valor es repeat, para que no se repitan ponemos:
+  background-repeat: no-repeat;
+
+ahora si solo quiero que se repitan en el eje X y no en el Y usamos el valor
+background-repeat: repeat-x;
+
+ahora si solo quiero que se repitan en el eje Y y no en el X usamos el valor
+background-repeat: repeat-y;
+
+  background-position: posicion x, posicion en y ;
+  se le pueden dar valores en px % rem em
+  tambien recibe unas palabras reservadas para determinar la posicion,
+  estas palabras son: top, bottom ,left, right y center
+
+  tambien puedo mezclar las medidas, por ejemplo si lo uso de esta forma 
+   background-position: top 20px right 10px;
+   esto quiere decir que desde la parte alta del contenedor le va a agregar
+   20px y desde la parte derecha le va a agregar 10px
+
+
+background-size: ancho y alto ;
+tamaño del fondo
+
+  background-size: contain;
+  contain escala la imagen al mayor tamaño posible sin recortar y sin estirar
+  la imagen
+
+ background-size: cover;
+ esta si va a ocupar el 100% del contenedor pero si es necesario va a recortar 
+ la imagen 
+
+  background-attachment: ;
+  sirve para modificar que tan fijo es el posicionamineto de las imagenes
+  ej: si uso 
+    background-attachment: fixed ;
+    la images va a tomer el 100% del tamaño del NAVEGADOR pero solo se 
+    va a mostrar la porcion que ocupa el contenedor
+
+    si el tamaño de la pantalla se vuelve mas alto como para hacer scroll
+    veremos un efecto parallax 
+
+
+Gradientes
+background-image: linear-gradient(crimson, orange);
+este es el degradado desde el color crimson a orange
+por defecto la direccion es de arriba hacia abajo 
+
+background-image: linear-gradient(direccion, color stop, color stop ...);
+este es el orden de valores del linear gradient
+
+background-image: linear-gradient(to top, crimson, orange);
+esto pone el crimson abajo y orange arriba
+tambien puede ser to left, to right, to top, to bottom
+de igual manera puedo mezclarlos de la siguiente forma
+ background-image: linear-gradient(to top left, crimson, orange);
+ y asi sale un gradiente en diagonal
+
+ de igual forma puedo usar angulos para determinar una direccion del gradiente
+   background-image: linear-gradient(63deg, crimson, orange);
+
+los stop determinan el porcentaje en donde parara la transicion ej:
+  background-image: linear-gradient(crimson 5%, orange 80%);
+
+
+  background-image: linear-gradient(
+      rgba(220, 20, 60, 0.445),
+      rgba(255, 166, 0, 0.473)
+    ),
+    url(/img/tecnologia2.jpg);
+
+    una imagen con un fondo delante en degradado
+
+-------------------------------------------------------------
+Listas e imagenes
+ 
+
+ Las listas tienen un padding por defecto (donde aparecen los puntos
+ o los numeros de las listas) siqueremos quitar este padding lo 
+ hacemos de la siguiente forma:
+ ul,
+ol {
+  padding: 0;
+}
+
+
+list-style: tipo, imagen, posicion de la lista;
+esta propiedad se puede usar en el elemtno li o directamente 
+en el elemento ul u ol
+
+list-style: disc;
+list-style aplicaco a ul por defecto tiene el valor disc,
+que hace alucion a los discos o puntos que llevan  a lado izquierdo
+
+list-style: decimal;
+va a aparecer ordenada por numeros
+
+list-style: square;
+con cuadrados
+
+list-style: upper-roman;
+numeros romanos
+
+list-style: none;
+sin nada
+
+ list-style-image: url(/img/icono.png);
+ usar una imagen como indcador (viñeta) de orden (en lugar de numeros o los puntos ) 
+
+list-style-position: outside;
+posicion de las viñetas de orden, por defecto es outside
+
+ list-style-position: inside;
+ poner las viñetas dentro del contenido
+
+resolucion de una imagen:
+a veces vamos a querer que una imagen este fija en un ancho 
+y un alto, como en una galeria.
+para esto podemos usar la propiedad object-fit
+al igual que el backgroun podemos usar contain, fill, cover, none
+es recomendado tanto para background como para object-fit usar cover
+ya que este recorta la imagen pero no pierde resolucion
+
+---------------------------------------------------------------------------
+pseudoclases
+
+Sirven como  filtro a los selectores
+o tambien se pueden ver como selectores de un estado en especifico de un elemento
+ej; click mouseover etc etc
+
+estas solo funciona con el elemeno <a></a>
+:link: para los elementos que NO han sido visitados 
+:visited: para los elementos que ya han sido visitados
+
+:hover: se activa cuando pasamos el mouse sobre un elemento
+:active: se activa cuando damos click sobre un elemeno, solo va a estar activa cuando
+tengamos presionado el click del mouse
+:target se puede apuntar a otro elmento
+
+:focus: seleccion aun elemento cunado un usuario esta activo en elemento
+ej: un input
+
+un elementos como h1...h6 o labels  se puende volver editables si se agrega
+la propiedad contenteditable
+
+:checked: selecciona al elemento que previamente haya sido seleccionado,
+solo funciona con inputs de tipo radio o checkbox
+
+:focus-within: selecciona un elemento que contenga un elemento hijo en estado focus
+
+:root: da estilo al elemento raiz de la pagina, en la mayoria de lso casos es 
+la etiqueta html
+
+:not:es un filtro, sirve como una negacion
+
+:only-of-type: seleccion a los elementos que son unicos dentro de su 
+contenedor padre
+
+.box:first-of-type:selecciona el primer elemento de su tipo
+
+.box:nth-of-type(2): selecciona el elemento de su mismo tipo que este en
+la posicion que especifique, en este caso la segunda
+
+.box:nth-of-type(odd): selecciona los elementos impares
+.box:nth-of-type(even): selecciona los elementos pares
+
+.box:nth-of-type(n) los selecciona a todos 
+
+.box:nth-last-of-type(): hace los mismo que el anterior solo que inicia desde
+abajo hacia arriba
+
+
+---------------------------------------------------------------------------
+posiciones
+por defecto todos los elementos del html vienen con 
+position:static esto no permite desplazar el elemento
+quiere decir que siguen el flujo de siempre, de arriba hacia abajo
+y de izquierda a derecha
+
+relative: cuando uso relative puedo acceder a 4 nuevas propiedades que son:
+top, left, right, bottom
+y se llama relative porque se mueve deacuerdo a su posicion relativa, la original 
+
+.relative {
+  background: crimson;
+  position: relative;
+  /* top: 20px;
+  left: 200px;
+  right: 0;
+  bottom: 0; */
+}
+
+Absolute: se posiciona de acuerdo a su elemento padre, OJO, position static no cuenta 
+como posicionamiento, su elemento padre debe ser relative, en caso de no tener un elemento padre,
+se posicionara de acuerdo al body del navegador tambien puedo usar top, left, right, bottom
+
+
+la propiedad z-index solo funciona con elementos posicionados como relative fixed o absolute, no funciona
+con static
+
+fixed: al igual que absolute pierde su espacio en el flujo, se posiciona con base solo al navegador, no se posiciona 
+con respecto a un componente padre como el absolute. 
+------------------------------------------------------------------------
+Variables o Custom properties
+
+:root {
+  --color-primario: rgb(223, 11, 11);
+  --color1: darkCyan;
+}
+
+se llaman usando la funcion var()
+  color: var(--color-primario);
+
+ Fallback es un valor por defecto en caso de 
+no encontrar la varaible que estamos llamando 
+color: var(--color12, rgb(0, 207, 138));
+
+------------------------------------------------------------------------
+Media Queries
+
+Cada dispositivo tiene un viewport diferente.
+viewport: area visible del navegador
+
+Imagnes: usar un  max-width: 100% en todas la imagenes y la etiqueta picture
+
+
+definir media Queries
+@media "tipo de media" and (expresion)
+"tipo de media": si es una pantalla o mandamos a imprimir una pagina a una impresora
+la expresion define cuando es que se debe ejecutar la media querie
+
+
+Puedo utilizar mas de una condicion para las mediaqueries tambien compuertas logicas
+en este caso and
+@media screen and (orientation: portrait) and (max-width: 600px) {
+  .title {
+    text-align: right;
+  }
+}
+
+Tambien puedo utilizar or, el or se puede usar por medio de una ","
+
+-------------------------------------------------------------
+metodologia BEM (Block Elelemt Modifier)
+
+
+Bloque: entida o elemento independinte, form footer, contenedor un menu etc
+ej: 
+    <form class="form">
+    </form>
+
+Element: elementos dentro de un bloque
+ej: 
+    <form class="form">
+<input type="text" class="form__input">
+<input type="text" class="form__input">
+    </form>
+
+Modificador: representa una alteraciona un bloque o un elemento.
+ej, todos los enlaces tendran un color negro, excepto 1, en este caso 
+a ese unico enlace le agregamos un modificador
+ej:
+    <nav class="navbar">
+      <a href="#" class="navbar__item navbar__item--red">Inicio</a>
+      <a href="#" class="navbar__item">Acerca de</a>
+      <a href="#" class="navbar__item"> </a>
+    </nav>
+
+ --------------------------------------------------------------------
+ flexbox   
+ comportamiento por defecto es: 
+   align-items: stretch;
+   flex-direction:row;
+   flex-wrap: nowrap
+   justify-content: flex-start:
+
+   display: inline-flex: permite que el contenedor sea un elemento
+   en linea
+
+flex-direction: row;
+flex-wrap: wrap;
+
+atajo para flex-direction y flex-wrap:
+flex-flow: direction wrap;
+flex-flow: row wrap;
+
+alineamiento:
+justify-content: center: alineamiento en el eje PRINCIPAL
+para que se pueda alinear se debe tener espacio sobrante o disponible 
+dentro del contenedor
+
+ align-items: center: alineamiento en el eje SECUNDARIO
+para que se pueda alinear se debe tener espacio sobrante o disponible 
+dentro del contenedor por defecto stretch
+
+align-content: center: esta propiedad sirve para alinear al eje
+SECUNDARIO, siempre y cuando se desborden los elementos en el 
+eje principal, es decir cuando hay mas de 1 fila o columna, o sea, 
+si funciona el wrap
+
+
+flex-grow:es el factor de crecimiento, determina cuanto crece 
+un elemento con respecto a otros, distribuye el espacio sobrante
+entre los flex-items
+
+ej: si todos los flex items tiene un flex-grow de 1 entonces 
+se distribuye el espacio equitativamente, con esto ya no puedo 
+usa justify-content, ya que no habria espacio disponible
+
+si solo aplico flex-grow:1 a 1 item del contenedor, este 
+item tomara el espacio sobrante 
+
+Ahora, si tengo 3 items con un flex-grow:1 y un cuarto item con un  
+flex-grow: 3 (en el ejemplo tengo 4 items) el grow se calcularia 
+con 6 items, o sea 3+3, por ende el espacio sobrante se divide
+entre 6, pero como existe un item con un flex-grow:3 a ese item
+se le aplica (espacio_sobrante/6) * 3
+
+flex-grow flex-shrink y flex-basis solo funcionan en el 
+eje principal
+
+
+
+flex-shrink:determina que tanto se encoje un elemento con 
+respecto a otro, esto pasa cuando se distribuye el espacio 
+FALTANTE, es decir, si falta espacio los item se encojeran
+para no desbordar el contenedor, por defecto flex-shrink:1.
+flex-shrink no acepta negativos, el minimo el 0
+
+funciona igual que flex-grow cuando doy un valor mayor a 1 solo
+que disminuyendo el tamaño
+
+flex-basis: tamaño inicial del elemento antes de que sufra algun
+cambio de distribucion ya sea grow o shrink
+el valor por defecto es auto
+flex-basis predomina por encima a width o height
+
+shorthand para grow shrink y basis
+flex: grow shrink basis
+
+align-self: center ; hace lo mismo que align items solo que este aplica
+solo para un elemento en particular, solo aplica para el eje secundario
+

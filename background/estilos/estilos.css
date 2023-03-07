@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;500&family=Open+Sans:wght@300&family=Poppins:wght@300;700&family=Raleway:ital,wght@0,100;0,400;0,500;1,300;1,400;1,500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* font-family: "Raleway", sans-serif;
+  display: flex;
+  justify-content: space-evenly; */
+}
+
+/* .container {
+  width: 70%;
+  height: 300px;
+  margin: 30px auto;
+   background: rgb(100, 100, 250); 
+   background-color: rgb(73, 22, 194); 
+  background-image: url(/img/tecnologia.jpg);
+  background-repeat: no-repeat;
+  background-color: slateblue;
+  background-position: center;
+  background-size: cover; 
+} */
+
+/* .fixed {
+  background-attachment: fixed;
+}
+
+.atachment {
+  width: 40%;
+  height: 400px;
+  margin-top: 40px;
+  background-image: url(/img/tecnologia.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.title {
+  font-size: 70px;
+
+  text-align: center;
+  color: #fff;
+}
+
+.space {
+  height: 3000px;
+} */
+
+/* gradientes o degradados */
+/* .container {
+  width: 80%;
+  height: 400px;
+  margin: 30px auto;
+  background: steelblue;
+  background-image: linear-gradient(crimson 5%, orange 80%);
+} */
+
+.header {
+  padding: 0.1px;
+  height: 600px;
+  background-image: linear-gradient(to top, #a18cd167 0%, #fbc2eb5b 100%),
+    url(/img/tecnologia2.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.title {
+  color: #fff;
+  font-size: 60px;
+  text-align: center;
+  margin-top: 270px;
+}
