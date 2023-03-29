@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Nunito:wght@400;500&family=Open+Sans:wght@300&family=Poppins:wght@300;400;500;700&family=Raleway:ital,wght@0,100;0,400;0,500;1,300;1,400;1,500&display=swap");
+
+:root {
+  --height-nav: 70px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f2f2f2;
+}
+/* cuando agrego el display flex a un contenedor
+automaticamente puedo usar grow shrink y basis 
+en los flex item, pero ademas tambien puedo usar el 
+z-index */
+.container {
+  display: flex;
+}
+
+.item {
+  background: tomato;
+  width: 200px;
+  height: 200px;
+}
+
+.item1 {
+  border: 10px dashed #fff;
+}
+
+.item2 {
+  background: steelblue;
+}
+
+.title {
+  margin-top: -40px;
+  background: #000;
+  color: #fff;
+  position: relative;
+  z-index: 10;
+}

@@ -521,3 +521,74 @@ flex: grow shrink basis
 align-self: center ; hace lo mismo que align items solo que este aplica
 solo para un elemento en particular, solo aplica para el eje secundario
 
+-------------------------------------------------------------------------------------------------
+gradient
+
+grid track: espacio entre 2 grid lines adyasentes tambien se les conoce com ofilas y columnas
+
+grid area:  es el espacio entre 4 grid lines, solo puede tener forma de un cuadrado o un rectangulo 
+
+El flujo de grid por defecto es el filas (column), vertical contrario
+a flexbox que es el columnas (row)
+ 
+ tambien por defecto tiene un align-items:stretch, esto hace
+ que los items ocupen el 100% del contenedor, a menos que 
+ se le de un alto fijo a los items
+
+grid-template-columns: define las columnas en el grid, se puede utilizar 
+cualquier unidad de medida
+
+puedo crear la cantidad de columnas que quiera con grid-template-column
+
+grid-template-columns: 10% 10% 10% 10% 10% si quisiera crea 5 o mas columnas
+esta seria la forma de hacerlo, pero es muy tedioso estar definiendo 
+una por una, para hacerlo mas rapido podemos usar repeat(cantidad, unidad de medida)
+
+ej: grid-template-columns:repeat(5, 10%)
+
+con repeat tambien puedo crear patrones, por ejemplo:
+grid-template-columns:repeat(3, 10px 50px) esto va a crear 3 columnas de
+10px y 50px, pero las va a intercalar, promero una de 10 y la siguiente de 
+50 y asi sucesivamente
+
+al igual que en flexbox tambien podemos hacer los grid-items flexxibles
+y para eso grid utiliza una unidad de medida llamada fr o fraccion
+Lo que hace esta unidad de medida es dividir el espacio dsiponible en fracciones
+
+grid-template-columns: 1fr 1fr 1fr: esto lo que hace es crear 3 columnas 
+del mismo tamaño, divide el ancho de la pantalla en 3 fracciones iguales
+
+  grid-template-columns: 3fr 1fr 1fr: de igua forma, tambien puedo crear
+  2 o mas fr, esta linea divide la pantalla en 5 fracciones, pero a la 
+  primer columna le va a dar el tamaño de 3
+
+
+  tambien puedo usar la unidad de medida auto, si al menos 1 de las columas
+  tiene como unidad de medida fr la columna auto va a tener el ancho de
+  su contenido, pero si las demas columnas tienen otra unidad mas fija
+  (px cm etc) la la unidad auto va ocupar el espacio disponible
+
+  grid-template-columns: 1fr 1fr auto;
+
+filas grid-row:
+para crea filas utilizo grid-template-row, esta por defecto tiene el valor 
+auto
+
+--------------------------------
+
+propiedades de los grid items:
+posicionamiento
+
+
+grid-column-start: linea de columna donde empieza, a travez de especificar
+la linea de columna donde yo quiera que empiece el elemento 
+grid-row-end:linea de columna donde termina
+
+atajo para grid-colum-start y grid-colum-end,
+grid-column: linea inicio / linea final;
+
+funciona igual para grid row
+
+
+
+
