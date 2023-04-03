@@ -590,5 +590,22 @@ grid-column: linea inicio / linea final;
 funciona igual para grid row
 
 
+el valor span me sirve para determinar cuantas columnas quiero usar o
+avanzar
+
+grid-column: span 2: la celda ahora ocupa 2 columnas
+grid-row: span 3: la celda ahora ocupa 3 filas
+
+valores negativos: como vemos en las lineas que dibuja el navegador al final
+del contenedor existen -1 para filas y columnas, estos valores tambien 
+me ayudan a determinar la pocision de una celda, por ejemplo 
+grid-row: 1 / -2;
+
+grid-area: es un atajo para grid-column y grid-row
+grid-area: line inicial fila / linea inicial columna / linea final fila /
+liena final columna
+
+
+
 
 
