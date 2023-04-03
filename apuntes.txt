@@ -605,7 +605,56 @@ grid-area: es un atajo para grid-column y grid-row
 grid-area: line inicial fila / linea inicial columna / linea final fila /
 liena final columna
 
+  row-gap: 20px; espaciado entre filas
+  column-gap: 20px; espaciado entre columnas
 
+  gap: es un atajo para para row gap y y column gap
+  gap: espaciado entre filas espaciado entre columnas 
+  gap: 10px se aplica para filas y columnas
+
+
+  grid-column-gap grid-row-gap y grid-gap ya son propiedades obsoletas
+  ya no debo utilizarlas
+
+
+  el flujo por defecto de grid es en filas al igual que en flexbox
+  pero puedo cambiar el flujo con la propiedad  grid-auto-flow: column o row ;
+
+  cuando definimos el flujo de grid ya sea row o column se crean filas o 
+  columnas implicitas( se crean por defecto cuando no caben en el 
+  contenedor) pero se crean con un tamanño menor al del resto de 
+  los items, pero con las propiedades   grid-auto-columns: 100px;
+  o grid-auto-rows: 100px; podemos  darle un tamaño a esas filas
+  o columnas implicitas
+  ej:
+
+grid-auto-columns: 100px;
+grid-auto-rows: 100px;
+
+puedo crear un patron con los tamaños de las columnas o filas implicitas
+de la siguiente manera:
+
+grid-auto-columns: 20px 50px;
+grid-auto-rows: 20px 50px;
+
+esto le dara a la primer fila/columna un tamaño de 20px y a la
+segunda un tamaño de 50px y asi sucesivamente
+
+En ocaciones al momento de crear nuestra grid podemos tener espacios 
+en blanco, estos espacioj se pueden "llenar" o mejor grid los
+organiza de le la mejor forma usaando el valor dense de la propiedad
+grid-auto-flow: dense;
+
+este lo organiza por filas por defecto, pero si queremos que lo 
+organice por columnas usamos 
+grid-auto-flow: column dense;
+
+-------------------------------------------------
+grid areas
+grid-template-areas: ""; representa algo como una plantilla
+cada par de comillas representa una fila y dentro de las
+comillas van nombres, estos nombres van a definir columnas 
+(yo se, suena raro pero asi es)
 
 
 
