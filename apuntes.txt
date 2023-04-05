@@ -656,5 +656,95 @@ cada par de comillas representa una fila y dentro de las
 comillas van nombres, estos nombres van a definir columnas 
 (yo se, suena raro pero asi es)
 
+grid-template-areas:
+    "c1 c1 c2 c3"
+    "c1 c1 c5 c6";
 
 
+  grid-template-areas:
+    "header header header main main"
+    "header header header main main"
+    "header header header main main";
+
+  si no quiero asignar una columna (dejarla vacia)
+  solo debo asignar un . 
+
+  grid-template-areas:
+    "header header header main main"
+    "header header header main main"
+    "header header header . .";
+
+
+    ahora como voy a posicionar los elementos en 
+    las areas? usando la propiedad grid-area
+
+    esta propiedad se le asigna a los elementos de la siguente forma:
+
+
+    .header {
+  background: crimson;
+  grid-area: header;
+}
+
+.main {
+  background: seagreen;
+  grid-area: main;
+}
+
+.sidebar {
+  background: slateblue;
+  grid-area: sidebar;
+}
+
+.footer {
+  background: skyblue;
+  grid-area: footer;
+}
+
+--------------------------------------------------
+css grid avanzado
+
+podemos dar nombre a las lineas del grid usando []
+ojo, el nombre lo debemos definir antes del valor de la 
+columna. ej:  grid-template-columns: [linea-inicial]1fr [linea-medio]1fr [linea-final];
+.grid {
+  width: 90%;
+  max-width: 600px;
+  height: 600px;
+  margin: 30px auto;
+  outline: 3px solid #000;
+  display: grid;
+  grid-template-columns: [linea-inicial]1fr [linea-medio]1fr [linea-final];
+}
+
+las lineas tambien pueden tener mas de 1 nombre
+ grid-template-columns: [linea-inicial]1fr [linea-medio linea-inicial2]1fr [linea-final];
+
+ valores dinamicos para las celdas:
+min-content: crea una celda con el minimo de valor posible, crece deacuerdo a 
+su contenido
+max-content: crea una celda con el maximo de valor posible
+
+  grid-template-columns: min-content max-content;
+  grid-template-rows: min-content max-content;
+
+fit-content(): nos ayuda a definir un tamaño MAXIMO para una fila
+o una columna ej:
+  grid-template-columns: fit-content(200px);
+
+  minmax(): define el valor minimo o maximo de una columna o fila
+
+minmax(valor minimo, valor maximo)
+
+grid-te mplate-columns: minmax(200px, 400px) minmax(20px, 200px);
+
+auto-fill: se usa junto con repeat, crea tantos tracks (colunas o filas)
+como sea posible. ej
+grid-template-columns: repeat(auto-fill, 20%);
+
+ puedo utilizar minmax() dentro del repeat
+ grid-template-columns: repeat(auto-fill, minmax(110px, 20%));
+
+
+
+   auto-fit:
