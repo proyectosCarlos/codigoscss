@@ -745,6 +745,43 @@ grid-template-columns: repeat(auto-fill, 20%);
  puedo utilizar minmax() dentro del repeat
  grid-template-columns: repeat(auto-fill, minmax(110px, 20%));
 
+-----------------------------------------------
+alienacion grid
+
+ justify-items: se alienean los elementos en filas, su valor por defecto es 
+ stretch
+
+ align-items: alinearlos en columnas (verticalmente)
+
+ place-items: es el atajo para justify-items y align-items
+ place-items: align-items justify-items
+place-items: center start;
+si solo uso un valor este valor aplicara para las 2 propiedades
 
 
-   auto-fit:
+si el tamaño de la grid es pequeño y existe espacio horizontalmente puedo 
+alinear toda la grid con respecto de un contenedor usando justify-content
+y align-content
+
+justify-content:alinear horizontalmente. center | start| end | space-around...
+ align-content: alinear verticalmente  center | start| end | space-around...
+
+place-content: atajo para justify-content y align-content
+
+place-content:align-content justify-content
+  
+grid: es un atajo para grid-template-columns y grid-template-rows
+grid: rows/columns
+grid: 1fr 1fr / repeat(3, 1fr);
+
+order: esta propiedad se declara en los GRID ITEMS, por defecto el valor de
+order es 0 entre mas grande sea en valor se pondra al final 
+order: 3;
+
+podemos alinear vertical y horizontalmente un solo item de un grid usando 
+align-self y justify-self
+  align-self: center;
+  justify-self: end;
+ justify-self: stretch;
+ place-self: align justify: atajo para align-self y justify-self 
+recuerda que estos solo se aplican a los ITEMS no al grid completo
