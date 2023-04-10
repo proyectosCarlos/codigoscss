@@ -349,6 +349,54 @@ la posicion que especifique, en este caso la segunda
 .box:nth-last-of-type(): hace los mismo que el anterior solo que inicia desde
 abajo hacia arriba
 
+.box:only-child: selecciona a los elementos que sean hijos unicos no importa el tipo, o sea que no tienen
+elementos hermanos
+
+tambien podemos encontra el only-child de la siguente forma, .container :only-child 
+recordemos que cuando se pone un espacio antes de una pseudoclase es como si tuviera un *
+.container *:only-child 
+
+.container :first-child: selecciona el primer hijo de un contenedor (esta pseudoclase es un condicional),
+aqui podemosser aun mas especifico cuando queremos crear condiciones del primer hijo, por ejemplo, 
+si quiero crear el condicional para que se aplique si el primer elemeno hijo
+es un parrafo  lo puedo hacer de la siguiente forma: p:first-child,
+aqui se aplica mi css siempre y cuando el PRIMER elemento hijo del contenedor sea un 
+parrafo.
+
+.box:last-child: funciona igual que first-child, solo que este selecciona el ULTIMO 
+elemento hijo que cumpla con la condicion
+
+div:nth-child(4): selecciona el 4to elemento si este es un div y le aplica el css
+
+.container :nth-last-child(1): funciona igual que first-child, solo que empezando
+de abajo hacia arriba, en este caso aplica el css al primer elemento de abajo hacia 
+arriba
+
+::selection: permite modificar la manera como se seleccionan los elementos 
+en una pagina
+
+::first-line: permite modificar la primer linea de un texto
+p::first-line {
+  color: blue;
+}
+
+::first-letter: permite modificar la primera letra de un parrafo
+
+::placeholder: me permite modificar el placeholder de un input
+
+
+::before y ::after permiten cear elementos sin estar en el HTML
+
+
+------------------------------------------------------------------------------
+pseudoelementos
+Permiten añadir estilos a una parte concreta del documento o de los elementos
+
+por ejemplo la primer parte de un parrafo
+
+a diferencia de las pseudoclases los pseudoelementos se definen con 4 puntos ::
+
+
 
 ---------------------------------------------------------------------------
 posiciones

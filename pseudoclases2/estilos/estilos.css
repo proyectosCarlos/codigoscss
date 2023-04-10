@@ -31,14 +31,61 @@ body {
   border: 3px solid lightcoral;
 }
 
-div:only-of-type {
+/* div:only-of-type {
   background: crimson;
-}
+} */
 
 /* .box:first-of-type {
   background: lawngreen;
 } */
 
-.box:nth-of-type(2) {
+/* .box:nth-of-type(2) {
   background: lawngreen;
+} */
+
+/* .box:only-child {
+  background: slateblue;
+} */
+
+/* .container :only-child {
+  background: slateblue;
+} */
+
+/* .container :first-child {
+  background: salmon;
+} */
+
+/* p:first-child {
+  background: seagreen;
+} */
+/* para que este funciona debo poner
+el p en el primer lugar del contenedor */
+
+/* .box:first-child {
+  background: salmon;
+} */
+
+/* .box:last-child {
+  background: tomato;
+} */
+
+/* div:nth-child(4) {
+  background: skyblue;
+} */
+
+/* .container :nth-child(even) {
+  background: seagreen;
+} */
+
+/* body :nth-child(4) {
+  background: slateblue;
+} */
+
+/* body :nth-child(5n) {
+  background: slateblue;
+} */
+/* cada 5 elementos */
+
+.container :nth-last-child(1) {
+  background: sandybrown;
 }
