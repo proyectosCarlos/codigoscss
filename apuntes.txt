@@ -396,6 +396,16 @@ por ejemplo la primer parte de un parrafo
 
 a diferencia de las pseudoclases los pseudoelementos se definen con 4 puntos ::
 
+.card__text::before{
+  content: url(): para agregar una imagen
+}
+.card__text::before {
+  content: "Hola texto";
+}
+
+.card__text::after {
+  content: "al final del texto ";
+}
 
 
 ---------------------------------------------------------------------------
