@@ -18,6 +18,9 @@ https://smooth.ie/blogs/news/svg-wavey-transitions-between-sections
 Conocer la resulocion de mi pantalla
 https://whatismyviewport.com/
 
+generador de clip-path
+https://bennettfeely.com/clippy/
+
 -----------------------------------------------------------------------------
 display: inline: NO comienzan en una nueva línea y
 solo ocupan tanto ancho como su contenido, si aplico un 
@@ -843,3 +846,76 @@ align-self y justify-self
  justify-self: stretch;
  place-self: align justify: atajo para align-self y justify-self 
 recuerda que estos solo se aplican a los ITEMS no al grid completo
+
+
+
+---------------------------------------------------------------------------------------------------------------
+clip-path
+
+//recorte circular
+.circle{
+ // clip-path: circle(radio at posicion en x posicion en y )
+  clip-path: circle(50% at 50% 50%)
+}
+
+//recorte rectangular o cuadrangular
+clip-path: inset(10% 10% 10% 10%) estos valore son obligatorios, representan arriba abajo izquierda y derecha
+clip-path: inset(10%) tambien podemos usar un shorthand para plicar el 10% por ejemplo para posicionar 
+los 4 lados al 10%
+clip-path: inset(10px 10px 10px 10px round 30px): tambien podemos usar round para redondear las esquinas
+
+//recorte ovalado
+//clip-path: ellipse(alto ancho at posicion en x posicion en y)
+clip-path: ellipse(25% 40% at 50% 50%)
+clip-path: ellipse(25% 40% at center)
+
+//crear poligonos
+clip-path: polygon(50% 0%, 0% 100% 100% 100%)
+//definimos los puntos existentes, como minimo tenemos que definir 3 puntos 
+
+//crear una mascara
+clip-path: path(#mask)
+recorta un elemento tomando como molde un elemento svg
+
+generador de clip-path
+https://bennettfeely.com/clippy/
+-------------------------------------------------------------------------------------------
+Trasformaciones
+
+transform: translateX(); nos permite transladar el elmento por el navegador usando las
+ coordenadas en x 
+transform: translateX(100px);
+
+transform: translateY(200px): nos permite transladar el elmento por el navegador usando las
+ coordenadas en y
+ translateY(200px)
+
+ shorthand:  transform: translate(x,y); valores en x y en y
+  transform: translate(200px, 200px);
+
+.element {
+  background: skyblue;
+  width: 150px;
+  height: 150px;
+  color: #fff;
+  padding: 10px;
+  /* transform: translateX(100px); */
+  transition: 0.4s;
+}
+
+.container:hover .element {
+  transform: translateX(200px);
+  /* transition: 0.4s; */
+}
+//si aplico el transicion al elemento y no al contenedor, este muestra la transicon tanto 
+cuando se aplica como cuando se quita
+
+transform: rotate(25deg); gira el elemento, esta funcion solo recibe valores de grados,
+radianes o gradientes
+
+// grados : 0 a 360 deg
+//radianes: 0-6.38319 (6.38319 para abarcar una vuelta ) rad
+//gradientes: 0-400 (400 para abarcar una vuelta) grad
+//turn: 0-1 (1 es el valor de una vuelta)
+
+ transform: rotate(1turn);
