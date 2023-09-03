@@ -14,31 +14,50 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+/* una transicion nos permite animas los cambios de propiedades entre 2 estados de un elemento */
+/* consideraciones:
+-Los elementos inline no se pueden animar
+-No todas las propiedades son animables
+-
+*/
+
 .container {
-  outline: 2px solid crimson;
-  height: 500px;
+  outline: 1px solid #000;
   width: 90%;
-  margin: 60px auto;
+  height: 500px;
+  margin: 30px auto;
 }
 
 .element {
-  background: skyblue;
-  width: 150px;
-  height: 150px;
+  background: tomato;
+  width: 120px;
+  height: 120px;
   color: #fff;
-  padding: 10px;
-  /* transform: translateX(100px); */
-  /* transform: translateY(200px); */
-  /* transform: translate(200px, 200px); */
-  /* transform: rotate(25deg); */
-  transform: scale();
-  transition: 0.4s;
+  font-family: Arial;
+  position: relative;
+  left: 0;
+  clip-path: circle(70%);
+  /* transition: all 1s; */
+  /* transition es un shorthand porque esta compuesta de:  */
+  /*  */
+
+  /* transition-property: clip-path, transform;
+  transition-duration: 0.5s, 1s;
+  transition-timing-function: ease-in;
+  transition-delay: 0s, 0.5s; */
+
+  /* para hacer todo lo anterior pero con un shorthand usamos solo transition y separamos con , */
+  /* property|duration|timing-function|delay */
+  transition: clip-path, 0.5s ease-in 0s, transform 1s ease-in 0.5s;
 }
 
+/* .element:hover {
+  left: 80px;
+  background: steelblue;
+} */
+
 .container:hover .element {
-  /* transform: translateX(100%); */
-  /* transform: translateY(200px); */
-  /* transform: translate(200px, 200px); */
-  /* transform: rotate(0.6turn); */
-  /* transition: 0.4s; */
+  /* background: steelblue; */
+  clip-path: circle(50%);
+  transform: scale(0.5);
 }

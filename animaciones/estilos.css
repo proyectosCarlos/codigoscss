@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.cuadrado {
+  width: 200px;
+  height: 200px;
+  background: steelblue;
+  margin: 40px auto;
+  overflow: hidden;
+  animation-name: escala;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+  /* animation-delay: 2s; */
+}
+
+.cuadrado:hover {
+  animation-play-state: paused;
+}
+
+.spiderman {
+  width: 200px;
+  margin: 0 auto;
+  display: block;
+
+  /* animation: moverSpiderman 3s infinite, bg 3s infinite; */
+}
+
+@keyframes escala {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes moverSpiderman {
+  0% {
+    transform: translateY(-50px);
+  }
+  30% {
+    transform-origin: top center;
+    transform: translateY(0) rotate(5deg);
+  }
+  50% {
+    transform-origin: top center;
+    transform: rotate(-5deg);
+  }
+  75% {
+    transform-origin: top center;
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: translateY(-50px);
+  }
+}
+
+@keyframes bg {
+  from {
+    background-color: steelblue;
+  }
+  to {
+    background-color: tomato;
+  }
+}

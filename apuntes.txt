@@ -21,6 +21,12 @@ https://whatismyviewport.com/
 generador de clip-path
 https://bennettfeely.com/clippy/
 
+consideraciones css transform (referencias)
+https://cssreference.io/property/transform/
+
+cubic bezier
+https://cubic-bezier.com/#.32,.47,0,1.51
+
 -----------------------------------------------------------------------------
 display: inline: NO comienzan en una nueva línea y
 solo ocupan tanto ancho como su contenido, si aplico un 
@@ -919,3 +925,139 @@ radianes o gradientes
 //turn: 0-1 (1 es el valor de una vuelta)
 
  transform: rotate(1turn);
+
+
+--------------------------------------------------------------------------------------------
+transiciones
+  /* transition es un shorthand porque esta compuesta de:  */
+  /* property|duration|timing-function|delay */ 
+
+  transtion solo nesecita 2 de estas para que funcione, property y duration
+  transition-property: por defecto es none, pero podemos cambiarlo a all, esta aplica 
+  la transicion a todos los elementos animables. Pero esto no es recomendable ya que estariamos
+  saturando las animaciones (problemas de rendimiento)
+  solo deberiamos especificar la propiedad que quemos animar ej:
+  transition-property: height|width|transform|background...etc  
+
+  el segundo es transition-duration: el tiempo que va tomar la animacion ej: 1s
+
+  transition-property: background-color, transform;
+  transition-duration: 0.5s; //si lo uso de esta forma ambas transiciones duran 5 seg, pero 
+  puedo especificar el tiempo de duracion de cada una de la siguente manera
+
+    transition-property: background-color, transform;
+  transition-duration: 0.5s, 0.3s;
+
+transitions-timing-funtion: define la curva de aceleracion de la transicion entre el estado inicial 
+y el estado final. Esto lo hace por medio de un metodo llamado la curva de bezier o  ease-in  ease-in-out o  ease-out
+
+Podemos aplicar varios timing-function dependiendo de cuantas propiedades estemos aplicando
+
+ease:aumenta la velocidad a la mitad de la transicion
+ease-in: aumenta la velocidad de la transicion (inicia lento y termina rapido)
+ease-out: disminuye la velocidad de la transicion (inicia rapido y termina lento)
+ease-in-out: inicia lento acelera y termina lento 
+linear: la aceleracion nunca cambia
+steps(6, end/start): define la cantidad de pasos que quiero que ocurran durante la duracion 
+
+transition-delay: define la espera para que una transicion se ejecute, se define el segundos y milisegundos
+
+  /* para hacer todo lo anterior pero con un shorthand usamos solo transition y separamos con , */
+  /* property|duration|timing-function|delay */
+  transition: clip-path, 0.5s ease-in 0s, transform 1s ease-in 0.5s;
+
+
+--------------------------------------------------------------------------------------------------
+
+animaciones:
+animation: nombre de la regla creada mediante el keyframe,  tiempo de duracion ;
+animation: moverSpiderman 3s;
+
+los keyframes tienen dentro selectores, estos selectores seran porcentajes, estos porcentajes indican el progreso de la 
+animacion
+@keyframes moverSpiderman {
+  0% {
+    background-color: black;
+  }
+  30% {
+    background-color: chocolate;
+    transform: scale(1.2);
+  }
+  70% {
+    background-color: sandybrown;
+    transform: translate(100%);
+  }
+  100% {
+    background-color: aqua;
+  }
+}
+
+si quiero que una animacion se repita de manera infinita debo agregar infinite a la propieda animation ej:
+animation: moverSpiderman 3s infinite;
+
+tambien se pueden usar los selectores from y to dentro de los keyframes, from represente el estado al 0% y to el estado al 
+100%
+
+@keyframes moverSpiderman {
+  from {
+    background-color: aqua;
+  }
+  to {
+    background-color: blue;
+  }
+}
+
+
+puedo aplicar mas de un keyframe a la propiedad animation de la siguiente forma, creamos un nuevo keyframe llamado bg
+
+@keyframes bg {
+  from{
+    background-color: steelblue;
+  }
+  to{
+    background-color: tomato;
+  }  
+}
+
+animation: moverSpiderman 3s infinite, 
+            bg 3s infinite;
+
+@keyframes moverSpiderman {
+  0% {
+    transform: translateY(-50px);
+  }
+  30% {
+    transform-origin: top center;
+    transform: translateY(0) rotate(5deg);
+  }
+  50% {
+    transform-origin: top center;
+    transform: rotate(-5deg);
+  }
+  75% {
+    transform-origin: top center;
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: translateY(-50px);
+  }
+}
+
+
+animaction es un shorthand, este tambien tiene propiedades y son estas:
+  animation-name: animacion1, animacion2; //nombres de la o las animaciones
+  animation-duration: duracion1, duracion2; //duracion de la o las animaciones
+  animation-timing-function: ease; //curva de aceleracion de la animacion
+  animation-iteration-count: 2; //cuantas veces sera repetida la animacion
+  animation-direction: reverse; //determina el orden en que se ejecuta el @keyframe ej:
+  normalmente el keyframe se ejecuta del 0 al 100%, pero si utulizo reverse este se ejecuta del 100
+  al 0%.
+  animation-direction: alternate; //alternate ejecuta el keyframe del 0 al 100% y cuando llega
+    al 100% automaticamente se devuelve al 0%
+  animation-direction: alternate-reverse; //es igual que alternate solo que inicia en el 100%
+ animation-fill-mode: forwards; //define lo que sucede despues d ela animacion, se encarga de decirle al 
+ navegador si los estilos de la animacion se aplican despues de que termine, por defecto es none.
+ con forwards los estilos de la animacion se quedan despues de que se ejecute la animacion
+animation-delay: 2s; //tiempo de retardo para que se ejecute la animacion
+animation-play-state: paused; //activa o detiene la animacion, esta se puede usar con un trigger
+para detener o reanudar una animacion, sus valores son running o paused
